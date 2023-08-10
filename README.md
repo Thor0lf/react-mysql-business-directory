@@ -28,12 +28,17 @@ Install dependencies
   npm install
 ```
 
-( // You can create a .env file in the client directory :
+If necessary, you can create a .env file in the client directory :
 
 ```bash
   PORT = 3003 (for example, 3000 by default)
 ```
-// )
+
+If necessary, in the reportory 'src', modify the file 'http-common.js' :
+
+```bash
+  const SERVER_PORT = 8000; (by default, or use your own server port)
+```
 
 Start the server
 
@@ -44,7 +49,7 @@ Start the server
 From the root directory, go to the server directory
 
 ```bash
-  cd client
+  cd server
 ```
 
 Install dependencies
