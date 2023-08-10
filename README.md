@@ -16,37 +16,7 @@ Go to the project directory
   cd react-mysql-business-directory
 ```
 
-Go to the client directory
-
-```bash
-  cd client
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-If necessary, you can create a .env file in the client directory :
-
-```bash
-  PORT = 3003 (for example, 3000 by default)
-```
-
-If necessary, in the reportory 'src', modify the file 'http-common.js' :
-
-```bash
-  const SERVER_PORT = 8000; (by default, or use your own server port)
-```
-
-Start the server
-
-```bash
-  npm run start
-```
-
-From the root directory, go to the server directory
+Go to the server directory
 
 ```bash
   cd server
@@ -61,9 +31,8 @@ Install dependencies
 Create a .env file in the server directory : 
 
 ```bash
-  PORT = 8008 (for example or delete it if you use the default port (8000))
-  CLIENT_PORT = 3003 (or the same than in the client .env file 
-                or delete it if you use the default port)
+  PORT = your_own_server_port (or delete it if you use the default server port (8000))
+  CLIENT_PORT = your_own_client_port (or delete it if you use the default client port)
   HOST = 'localhost' (for example)
   USER = 'root' (for example)
   PASSWORD = ''
@@ -74,25 +43,57 @@ Create a .env file in the server directory :
 Start the server
 
 ```bash
-  npm run start
+  npm start
 ```
 
-Populating the database with 'random' data
+Populating the database with 'random' data,
+from the root server directory
 
 ```bash
   node .\commands\seed.js 
 ```
 
-Add an administrator (login: admin@admin.fr / password: admin)
+Add an administrator (login: admin@admin.fr / password: admin),
+from the root server directory
 
 ```bash
   node .\commands\admin.js 
 ```
 
+From the root directory, go to the client directory
+
+```bash
+  cd client
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+If necessary, you can create a .env file in the client directory :
+
+```bash
+  PORT = your_own_client_port_number (3000 by default)
+```
+
+If necessary, in the reportory 'src', modify the file 'http-common.js' :
+
+```bash
+  const SERVER_PORT = 8000; (by default, or use your own server port)
+```
+
+Start the server
+
+```bash
+  npm start
+```
+
 In your browser, go to : 
 
 ```bash
-  http://localhost:3003/ (or your choice or 3000 by default)
+  http://localhost:3000/ (or your own client port)
 ```
 
 Enjoy !
